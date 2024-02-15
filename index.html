@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simply Chocolate</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+
+  <body>
+    <!-- hOW IT'S made? -->
+    <section class="section-two">
+      <h1 class="section-two-title">
+        How it's <span class="orange-title">made?</span>
+      </h1>
+      <div class="section-two-container">
+        <div class="video-container">
+          <iframe
+            class="video"
+            width="600"
+            height="400"
+            src="https://www.youtube.com/embed/DISjdfkSjc8?si=FwlDEg-tPr1Kl1ZY?autoplay=1&mute=1&loop=1"
+            title="YouTube video player"
+            frameborder="0"
+            preload="none"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            style="border-radius: 15px"
+            allowfullscreen
+          >
+          </iframe
+          >"
+        </div>
+        <div class="list-container">
+          <h2 class="list-title">
+            Try our chocolates today and discover the perfect balance of flavor
+          </h2>
+          <ul class="section-two-list">
+            <li class="list-element">
+              Heat the milk in a saucepan without bringing it to a boil. Add
+              sugar and cocoa powder.
+            </li>
+            <li class="list-element">
+              At the same time, prepare a water bath. Melt the butter on it.
+            </li>
+            <li class="list-element">
+              "Mix" the milk mixture and already liquid butter. Mix thoroughly
+              with a silicone spatula so that the mass becomes uniform and
+              silky.
+            </li>
+            <li class="list-element">
+              Heat the mixture over low heat, letting it barely boil.
+            </li>
+            <li class="list-element">
+              Pour the chocolate into special containers (can be replaced with
+              ice molds). Allow to cool and harden.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PRODUCTS -->
+
+    <section class="section-three">
+      <h1 class="section-three-title">
+        Our <span class="orange-title">products</span>
+      </h1>
+      <div
+        class="section-three-carousel-container slider hide-overflow"
+        data-flickity='{"groupCells": true}'
+      >
+        <ul class="our-products-list cards">
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/orange.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Orange</h3>
+              <p class="carousel-description">Dark chocolate</p>
+              <button class="carousel-button">45 UAH</button>
+            </div>
+          </li>
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/apple-cranberry.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Apple&Cranberry</h3>
+              <p class="carousel-description">Milk chocolate</p>
+              <button class="carousel-button">50 UAH</button>
+            </div>
+          </li>
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/Lime.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Lime&sea salt</h3>
+              <p class="carousel-description">Dark chocolate</p>
+              <button class="carousel-button">65 UAH</button>
+            </div>
+          </li>
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/pineapple.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Pinneaple</h3>
+              <p class="carousel-description">Dark chocolate</p>
+              <button class="carousel-button">54 UAH</button>
+            </div>
+          </li>
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/classic-milk.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Classic</h3>
+              <p class="carousel-description">Milk chocolate</p>
+              <button class="carousel-button">45 UAH</button>
+            </div>
+          </li>
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/honey.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Honey</h3>
+              <p class="carousel-description">Milk chocolate</p>
+              <button class="carousel-button">50 UAH</button>
+            </div>
+          </li>
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/roasted.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Roasted nuts</h3>
+              <p class="carousel-description">Dark chocolate</p>
+              <button class="carousel-button">66 UAH</button>
+            </div>
+          </li>
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/white.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Classic</h3>
+              <p class="carousel-description">White chocolate</p>
+              <button class="carousel-button">54 UAH</button>
+            </div>
+          </li>
+        </ul>
+        <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlide(1)">&#10095;</a>
+      </div>
+      <div class="pagination">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <script>
+        const slider = document.querySelector(".slider");
+        const cards = document.querySelector(".cards");
+        const cardWidth = document.querySelector(".card").offsetWidth;
+        const dots = document.querySelectorAll(".dot");
+        let currentIndex = 0;
+        function showCards() {
+          cards.style.transform = `translateX(-${
+            currentIndex * (cardWidth + 20)
+          }px)`;
+          updateDots();
+        }
+        function nextCard() {
+          if (currentIndex < 2) {
+            currentIndex++;
+            showCards();
+          }
+        }
+        function prevCard() {
+          if (currentIndex > 0) {
+            currentIndex--;
+            showCards();
+          }
+        }
+        function goToCard(index) {
+          currentIndex = index;
+          showCards();
+        }
+        function updateDots() {
+          dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+          });
+        }
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => goToCard(index));
+        });
+        document.addEventListener("DOMContentLoaded", showCards);
+      </script>
+    </section>
+  </body>
+</html>
