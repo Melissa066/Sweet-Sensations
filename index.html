@@ -5,20 +5,502 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simply Chocolate</title>
     <link
+      rel="icon"
+      type="image/png"
+      href="./src/images/chocolate-svgrepo-com.svg"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./CSS/styles.css" />
-    <script type="module" src="./index.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </head>
 
   <body>
+    <!-- HEADER -->
+    <header>
+      <div class="cent">
+        <div class="right">
+          <img class="logo" id="mare" src="./src/images/img/logo.png" />
+          <img class="logo" id="mic" src="./src/images/img/logomic.png" />
+          <div class="menu" id="menuicon">
+            <img id="menumare" src="./src/images/img/menu-03.png" alt="" />
+            <!-- <img id="menumic" src="./src/images/img/logomic.png" alt="" /> -->
+          </div>
+        </div>
+        <ul>
+          <li><a id="home" class="first-link" href="">Home</a></li>
+          <li><a href="">How it's made?</a></li>
+          <li><a href="">Our products</a></li>
+          <li><a href="">Top seller</a></li>
+          <li><a href="">Chocolate is loved</a></li>
+        </ul>
+        <div class="social">
+          <svg class="input-svg" id="first" width="24" height="24">
+            <use href="./src/images/img/icons.svg#instagram"></use>
+          </svg>
+          <svg class="input-svg" width="24" height="24">
+            <use href="./src/images/img/icons.svg#twitter"></use>
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      //menu phone
+      const menu = document.querySelector(".cent");
+      const menuicon = document.getElementById("menuicon");
+      let isMenuModified = false;
+
+      menuicon.addEventListener("click", function () {
+        if (isMenuModified) {
+          menu.classList.remove("menuphone");
+          menu.classList.add("cent");
+          if (screen.width < 576) {
+            menuicon.innerHTML = '<img src="/src/images/img/menu-03mic.png">';
+          } else {
+            menuicon.innerHTML = '<img src="images/menu-03.png">';
+          }
+
+          isMenuModified = false;
+        } else {
+          menu.classList.remove("cent");
+          menuicon.innerHTML = '<img src="/src/images/img/x.png">';
+          menu.classList.add("menuphone");
+          isMenuModified = true;
+        }
+      });
+    </script>
+
+    <!-- HERO SECTION -->
+    <section class="hero-page">
+      <div class="hero-div">
+        <div class="hero-container">
+          <p class="hero-title">
+            Treat yourself or a loved one to our finest ingredients for a moment
+            of pure delight!
+          </p>
+          <div class="hero-cointainer-second">
+            <div class="button-container-header">
+              <button type="button" class="button-buy-now" id="open">
+                Buy now
+              </button>
+              <button type="button" class="button-how-made">
+                How its made
+              </button>
+            </div>
+            <div class="scroll-down-div">
+              <p class="scroll-text">scroll down</p>
+              <button
+                type="button"
+                class="scroll-down-button"
+                id="scroll-down-button"
+                onclick="scrollToFooter()"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                >
+                  <path
+                    d="M11.6508 12.2834C11.5655 12.3693 11.4642 12.4375 11.3525 12.484C11.2407 12.5306 11.1209 12.5545 10.9999 12.5545C10.8789 12.5545 10.7591 12.5306 10.6474 12.484C10.5357 12.4375 10.4343 12.3693 10.3491 12.2834L6.15075 8.07588C6.06553 7.98996 5.96415 7.92177 5.85244 7.87523C5.74074 7.82869 5.62092 7.80473 5.49991 7.80473C5.3789 7.80473 5.25909 7.82869 5.14738 7.87523C5.03568 7.92177 4.9343 7.98996 4.84908 8.07588C4.67835 8.24763 4.58252 8.47996 4.58252 8.72213C4.58252 8.9643 4.67835 9.19663 4.84908 9.36838L9.05659 13.5759C9.57221 14.0909 10.2712 14.3801 10.9999 14.3801C11.7287 14.3801 12.4276 14.0909 12.9433 13.5759L17.1508 9.36838C17.3201 9.19764 17.4156 8.96719 17.4166 8.72671C17.4173 8.60607 17.3942 8.48648 17.3486 8.3748C17.3029 8.26311 17.2357 8.16153 17.1508 8.07588C17.0655 7.98996 16.9642 7.92177 16.8525 7.87523C16.7408 7.82869 16.6209 7.80473 16.4999 7.80473C16.3789 7.80473 16.2591 7.82869 16.1474 7.87523C16.0357 7.92177 15.9343 7.98996 15.8491 8.07588L11.6508 12.2834Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- MODAL -->
+
+    <div class="modal-buy-container" id="modal-container">
+      <div class="modal-buy">
+        <button type="button" class="modal-buy-button-close" id="close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+          >
+            <path
+              class="modal-buy-button-close-svg"
+              d="M21 7L7 21"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              class="modal-buy-button-close-svg"
+              d="M7 7L21 21"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <h2 class="modal-buy-header">
+          BUY <span class="modal-buy-header-span">NOW</span>
+        </h2>
+        <ul class="modal-buy-list">
+          <li class="modal-buy-list-cards">
+            <img
+              src="./src/images/images/chocolate-modal.png"
+              alt="dark chocolate"
+              width="120"
+              height="107"
+            />
+            <button type="button" class="modal-buy-list-button">100 g</button>
+          </li>
+          <li class="modal-buy-list-cards">
+            <img
+              src="./src/images/images/ciocolata-alba.png"
+              alt="white and dark chocolate"
+              width="120"
+              height="107"
+            />
+            <button type="button" class="modal-buy-list-button">200 g</button>
+          </li>
+          <li class="modal-buy-list-cards">
+            <img
+              src="./src/images/images/tableta-ciocolata.png"
+              alt="chocolate bar"
+              width="120"
+              height="111"
+            />
+            <button type="button" class="modal-buy-list-button">300 g</button>
+          </li>
+        </ul>
+        <form name="buy-menu" class="buy-menu-form">
+          <div class="buy-menu-lable-div-personal">
+            <label class="buy-menu-lable-text" for="fsname"
+              >Personal information</label
+            >
+            <div class="buy-menu-lable-div-personal-input">
+              <input
+                class="buy-menu-input-text buy-menu-input-text-personal"
+                type="text"
+                id="fsname"
+                name="fname"
+                placeholder="Name"
+              />
+              <input
+                class="buy-menu-input-text buy-menu-input-text-personal"
+                type="text"
+                id="fsname"
+                name="lname"
+                placeholder="Surname"
+              />
+            </div>
+          </div>
+          <div>
+            <label class="buy-menu-lable-text" for="email">Email</label>
+            <input
+              class="buy-menu-input-text buy-menu-input-text-email"
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="buy-menu-input-div-phone">
+            <label class="buy-menu-lable-text" for="phone">Phone number</label>
+            <input
+              class="buy-menu-input-text buy-menu-input-text-phone"
+              type="tel"
+              id="phone"
+              placeholder="Phone number"
+            />
+            <div class="flag">
+              <img src="./src/images/images/ukraine.svg" alt="flag" class="" />
+              <p>+380</p>
+            </div>
+          </div>
+          <div class="buy-menu-input-div-credit-card">
+            <label class="buy-menu-lable-text" for="card">Card number</label>
+            <input
+              class="buy-menu-input-text buy-menu-input-text-credit-card"
+              type="text"
+              id="card"
+              placeholder="Enter card"
+            />
+            <img
+              src="./src/images/images/mastercard.svg"
+              alt="mastercard logo"
+              class="master-card-logo"
+            />
+          </div>
+          <div>
+            <label class="buy-menu-lable-text" for="comment">Comment</label>
+            <textarea
+              class="buy-menu-input-text buy-menu-input-text-textarea"
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+              placeholder="Enter text"
+            ></textarea>
+          </div>
+          <button type="submit" class="buy-menu-submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- BENEFITS -->
+    <section class="section--benefits">
+      <div class="benefits">
+        <div class="cent">
+          <div class="type">
+            <div class="logo">
+              <img
+                src="./src/images/img/fluent-emoji-high-contrast_chocolate-bar.png"
+                alt=""
+              />
+            </div>
+            <h1>Unsurpassed taste</h1>
+            <p>
+              Crafted with the finest quality cocoa beans and a dedication to
+              perfection, each bite is a decadent experience that simply cannot
+              be matched. Savor the richness and complexity of our Unsurpassed
+              Taste and discover a new level of chocolate bliss.
+            </p>
+          </div>
+          <div class="border"></div>
+          <div class="type" id="marginleft">
+            <div class="logo">
+              <img src="./src/images/img/Coin.png" alt="" />
+            </div>
+            <h1>Affordable price</h1>
+            <p>
+              Indulge in high-quality chocolate without breaking the bank with
+              Simply Chocolate's selection of affordable treats. Enjoy
+              mouth-watering truffles and velvety chocolate bars without
+              sacrificing taste or quality. Browse our selection and indulge in
+              affordable luxury today.
+            </p>
+          </div>
+          <div class="border"></div>
+          <div class="type" id="marginright">
+            <div class="logo">
+              <img src="./src/images/img/la_utensil-spoon.png" alt="" />
+            </div>
+            <h1>Own production</h1>
+            <p>
+              We take pride in our own production process, ensuring that every
+              step is carefully crafted to perfection. From selecting the finest
+              ingredients to handcrafting each piece, our attention to detail is
+              evident in every bite.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D SECTION -->
+    <section>
+      <div class="section-three-div">
+        <div class="section-three-div-text">
+          <h2 class="section-three-header">
+            IT ALL ADDS UP TO ONE EXCEPTIONAL
+            <span class="section-three-span">TASTE</span> SENSATION
+          </h2>
+          <p class="section-three-p">
+            At Simply Chocolate, we believe that the secret to exceptional
+            chocolate is in the details. From the sourcing of the finest
+            ingredients to the careful crafting of each individual piece, every
+            step of our process adds up to one exceptional taste sensation.
+          </p>
+        </div>
+        <!-- FLIP MAIN -->
+        <div>
+          <div class="container--flip">
+            <div class="row">
+              <!-- FLIP CARDS -->
+              <!-- FLIP 1 -->
+              <div
+                class="section-three-cards"
+                ontouchstart="this.classList.toggle('hover');"
+              >
+                <!-- FLIP CARD INNER -->
+                <div class="section-three-flip-cards">
+                  <!-- FRONT CARD -->
+                  <div class="section-three-card-chocolate">
+                    <img
+                      src="./src/images/images/milk-chocolate.png"
+                      alt="chocolate"
+                      width="206"
+                      height="160"
+                      class="inner"
+                    />
+                    <p class="section-three-card-chocolate-p inner">
+                      MILK CHOCOLATE
+                    </p>
+                  </div>
+                  <!-- BACK CARD -->
+                  <div class="section-three-flip-card-chocolate">
+                    <div class="section-three-flip-card-chocolate-cover-div">
+                      <h3 class="section-three-flip-card-chocolate-header">
+                        Milk chocolate
+                      </h3>
+                      <div class="section-three-flip-card-chocolate-div">
+                        <p class="section-three-flip-card-chocolate-p">
+                          chocolate
+                        </p>
+                        <p class="section-three-flip-card-chocolate-p-p">
+                          the benefits
+                        </p>
+                      </div>
+                    </div>
+                    <p class="section-three-flip-card-chocolate-outer-p">
+                      Milk chocolate is a solid chocolate confectionery
+                      containing cocoa, sugar and milk. It is the most consumed
+                      type of chocolate. Chocolate was originally sold and
+                      consumed as a beverage in pre-Columbian times. Although
+                      four-fifths of all milk chocolate is sold in the United
+                      States and Europe.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- FLIP 2 -->
+              <div class="section-three-cards">
+                <div
+                  class="section-three-flip-cards"
+                  ontouchstart="this.classList.toggle('hover');"
+                >
+                  <div class="section-three-card-milk">
+                    <img
+                      src="./src/images/images/milk-bottle.png"
+                      alt="milk"
+                      width="206"
+                      height="160"
+                      class="bottle"
+                    />
+                    <p class="section-three-card-milk-p bottle">MILK</p>
+                  </div>
+                  <div class="section-three-flip-card-chocolate">
+                    <div class="section-three-flip-card-chocolate-cover-div">
+                      <h3 class="section-three-flip-card-chocolate-header">
+                        Milk
+                      </h3>
+                      <div class="section-three-flip-card-chocolate-div">
+                        <p class="section-three-flip-card-chocolate-p">milk</p>
+                        <p class="section-three-flip-card-chocolate-p-p">
+                          the benefits
+                        </p>
+                      </div>
+                    </div>
+                    <p class="section-three-flip-card-chocolate-outer-p">
+                      Milk is a white liquid food produced by the mammary glands
+                      of mammals. It is the primary source of nutrition for
+                      young mammals (including breastfed human infants) before
+                      they are able to digest solid food.Early-lactation milk,
+                      which is called colostrum, contains antibodies that
+                      strengthen the immune system.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- FLIP 3 -->
+              <div class="section-three-cards">
+                <div
+                  class="section-three-flip-cards"
+                  ontouchstart="this.classList.toggle('hover');"
+                >
+                  <div class="section-three-card-nuts">
+                    <img
+                      src="./src/images/images/nuts.png"
+                      alt="nuts"
+                      width="206"
+                      height="160"
+                      class="bottle"
+                    />
+                    <p class="section-three-card-nuts-p bottle">NUTS</p>
+                  </div>
+                  <div class="section-three-flip-card-chocolate">
+                    <div class="section-three-flip-card-chocolate-cover-div">
+                      <h3 class="section-three-flip-card-chocolate-header">
+                        Nuts
+                      </h3>
+                      <div class="section-three-flip-card-chocolate-div">
+                        <p class="section-three-flip-card-chocolate-p">nuts</p>
+                        <p class="section-three-flip-card-chocolate-p-p">
+                          the benefits
+                        </p>
+                      </div>
+                    </div>
+                    <p class="section-three-flip-card-chocolate-outer-p">
+                      Almonds, pistachios, and walnuts are some types of nuts
+                      that contain healthy nutrients. When eaten as part of a
+                      nutrient-dense diet, these 9 nuts may offer benefits such
+                      as reducing your risk of heart disease. They’re a good
+                      source of fiber, healthy fats, and plant protein. Plus,
+                      they’re great on their own.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- FLIP 4 -->
+              <div class="section-three-cards">
+                <div
+                  class="section-three-flip-cards"
+                  ontouchstart="this.classList.toggle('hover');"
+                >
+                  <div class="section-three-card-sweet">
+                    <img
+                      src="./src/images/images/sweet-chocolate.png"
+                      alt="sweet"
+                      width="206"
+                      height="160"
+                      class="bottle"
+                    />
+                    <p class="section-three-card-sweet-p bottle">
+                      SEMI - SWEET CHOCOLATE
+                    </p>
+                  </div>
+                  <div class="section-three-flip-card-chocolate">
+                    <div class="section-three-flip-card-chocolate-cover-div">
+                      <h3 class="section-three-flip-card-chocolate-header">
+                        semi - sweet chocolate
+                      </h3>
+                      <div class="section-three-flip-card-chocolate-div">
+                        <p class="section-three-flip-card-chocolate-p">
+                          sweet chocolate
+                        </p>
+                        <p class="section-three-flip-card-chocolate-p-p">
+                          the benefits
+                        </p>
+                      </div>
+                    </div>
+                    <p class="section-three-flip-card-chocolate-outer-p">
+                      Semi-sweet chocolate has a cocoa solid content of 35 to
+                      65%. One of the best ways to gain an understanding of this
+                      type of chocolate is to compare it to a different type of
+                      chocolate. Semisweet is darker than milk chocolate. In a
+                      taste comparison, it has a slightly bitter taste whereas
+                      milk chocolate is sweeter and more mellow.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- hOW IT'S made? -->
     <section class="section-two">
       <h1 class="section-two-title">
@@ -30,7 +512,7 @@
             class="video"
             width="600"
             height="400"
-            src="https://www.youtube.com/embed/DISjdfkSjc8?si=FwlDEg-tPr1Kl1ZY?autoplay=1&mute=1&loop=1"
+            src="./src/images/chocolote_spoler-2d8faa6d.mp4"
             title="YouTube video player"
             frameborder="0"
             preload="none"
@@ -109,7 +591,7 @@
             <div class="slide-container">
               <img
                 class="chocolate-picture"
-                src="./src/images/Lime.jpg"
+                src="./src/images/lime.jpg"
                 style="width: 230px; height: 201px"
               />
               <h3 class="carousel-title">Lime&sea salt</h3>
@@ -178,8 +660,8 @@
             </div>
           </li>
         </ul>
-        <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlide(1)">&#10095;</a>
+        <a class="prev" onclick="prevCard()">&#10094;</a>
+        <a class="next" onclick="nextCard()">&#10095;</a>
       </div>
       <div class="pagination">
         <span class="dot"></span>
@@ -228,7 +710,133 @@
           dot.addEventListener("click", () => goToCard(index));
         });
         document.addEventListener("DOMContentLoaded", showCards);
+
+        function scrollToFooter() {
+          const footerElement = document.getElementById("footer");
+          if (footerElement) {
+            footerElement.scrollIntoView({ behavior: "smooth" });
+          }
+        }
       </script>
     </section>
+
+    <!-- exPLORE OUR NEW CHOCOLATE FIRST -->
+    <section class="chocolate-first">
+      <div class="container chocolate-section">
+        <h1 class="chocolate-title">
+          EXPLORE OUR NEW <br />
+          CHOCOLATE FIRST
+        </h1>
+        <p class="chocolate-about">
+          From the velvety texture to the rich and complex flavor, our New
+          Chocolate is a true indulgence that will leave you craving more. Made
+          with only the finest ingredients and handcrafted with the utmost care,
+          each piece is a work of art that is sure to please.
+        </p>
+        <button type="submit" class="chocolate-button" data-modal-open>
+          Subscribe
+        </button>
+      </div>
+    </section>
+    <!-- MODAL FOOTER -->
+    <div data-modal class="modal-container is-hidden">
+      <div class="modal">
+        <div class="image-popup"></div>
+        <button type="button" class="modal---btn" data-modal-close>
+          <svg class="btn---svg">
+            <use href="./src/images/icons.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="info-popup" id="myPopup">
+          <h2 class="popup-title">
+            Explore our<br /><span class="popup-title-continue"
+              >new chocolate</span
+            >
+            first!
+          </h2>
+          <form class="form-class">
+            <input
+              class="modal-label"
+              id="input---modal"
+              placeholder="Enter your email"
+              type="email"
+              pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+            />
+            <button type="submit" class="subscribe-button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer-content" id="footer">
+      <div class="contacts-global">
+        <!-- <div class="footer-container"> -->
+        <h2 class="footer-title">
+          <span class="footer-title-color">Chocolate</span> a delicious cure for
+          a bad day
+        </h2>
+        <!-- </div> -->
+        <div class="contacts-icons">
+          <div class="contacts">
+            <p class="contacts-title">Contact us</p>
+            <address>
+              <ul class="footer-contact">
+                <li>
+                  <a href="tel:+380684439426" class="contact-link"
+                    >+380 (68) 443-94-26</a
+                  >
+                </li>
+                <li>
+                  <a href="mailto:simplychoc@gmail.com" class="contact-link"
+                    >simplychoc@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-icons">
+            <ul class="list-icons">
+              <li class="lists-icons">
+                <a href="" class="instagram">
+                  <svg width="22" height="22" class="insta">
+                    <use href="./src/images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="lists-icons">
+                <a href="" class="twitter">
+                  <svg width="22" height="22" class="twitt">
+                    <use href="./src/images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <nav class="footer-navbar">
+        <ul class="navbar-list">
+          <li>
+            <a href="" class="navbar-link">Home</a>
+          </li>
+          <li>
+            <a href="" class="navbar-link">How it's made?</a>
+          </li>
+          <li>
+            <a href="" class="navbar-link">Our products</a>
+          </li>
+          <li>
+            <a href="" class="navbar-link">Top sellers</a>
+          </li>
+          <li>
+            <a href="" class="navbar-link">Chocolate is love</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="./java-script/modal.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>

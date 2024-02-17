@@ -17,3 +17,23 @@ function showSlides() {
     }
     setTimeout(showSlides, 2000);
 }
+
+
+
+// index.js
+
+
+
+// index.js
+
+function scrollToFooter() {
+  const footer = document.getElementById('footer');
+  footer.scrollIntoView({ behavior: 'smooth' });
+}
+
+
+
+
+
+
+
