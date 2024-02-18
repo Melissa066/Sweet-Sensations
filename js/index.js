@@ -1,4 +1,3 @@
-// OUR PRODUCTS
 
 const totalSlides = document.getElementsByClassName("Slide").length;
 let currentSlideIndex = 0;
@@ -19,16 +18,26 @@ function showSlides() {
 }
 
 
+function showSlides() {
+    const container = document.querySelector(".Slides-container");
+    container.classList.add("hide-overflow");
 
-// index.js
+    if (currentSlideIndex < totalSlides) {
+        let slides = document.getElementsByClassName("Slide");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[currentSlideIndex].style.display = "block";
+        currentSlideIndex++;
+    } else {
+        currentSlideIndex = 0;
+    }
+    setTimeout(showSlides, 2000);
 
-
-
-// index.js
-
-function scrollToFooter() {
-  const footer = document.getElementById('footer');
-  footer.scrollIntoView({ behavior: 'smooth' });
+    // Șterge clasa "hide-overflow" după ce slide-ul a fost schimbat
+    setTimeout(() => {
+        container.classList.remove("hide-overflow");
+    }, 0);
 }
 
 

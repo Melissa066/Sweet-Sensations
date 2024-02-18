@@ -20,6 +20,7 @@ header {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   margin-bottom: 40px;
+  margin-top: 10px;
 }
 
 header .cent {
@@ -74,10 +75,10 @@ header .cent .right .menu {
 header .cent .right .menu img {
   cursor: pointer;
 }
-
+/* 
 header .cent .right .menu #menumare {
   display: none;
-}
+} */
 
 @media (min-width: 576px) {
   header .cent .right .menu #menumare {
@@ -119,11 +120,11 @@ header .cent ul {
   }
 }
 
-@media (min-width: 1180px) {
+/* @media (min-width: 1180px) {
   header .cent ul {
     margin: 0 137px 0 188px;
   }
-}
+} */
 
 header .cent ul li a {
   display: block;
@@ -172,6 +173,9 @@ header .cent .social .input-svg:hover {
 
   width: 100%;
   padding: 22 32px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
 }
 
 .menuphone .right {
@@ -619,9 +623,9 @@ iframe > .video-container {
     padding-top: 32px;
   }
 }
-
-/* OUR PRODUCTS */
-
+.hide-overflow {
+  overflow: hidden;
+}
 .our-products-list {
   list-style-type: none;
   flex-direction: row;
@@ -760,7 +764,6 @@ iframe > .video-container {
   justify-content: center;
 }
 .cards {
-  display: flex;
   transition: transform 0.5s ease;
 }
 /*tablet styles*/
@@ -783,10 +786,6 @@ iframe > .video-container {
     max-width: 100%;
     gap: 20px;
     padding-left: 0px;
-  }
-
-  header .cent ul li #home {
-    color: #fd9222;
   }
   .chocolate-picture {
     width: 230px;
@@ -1321,6 +1320,7 @@ body {
   border-radius: 15px;
   background: #fafafa;
   position: relative;
+  overflow: hidden;
 }
 
 .modal---btn {
@@ -1488,9 +1488,35 @@ body {
 
 /* Stilurile tale existente pentru input */
 .buy-menu-input-text {
-  border: 2px solid #ccc; /* Culoarea bordurii inițiale */
+  /* border: 2px solid #ccc; Culoarea bordurii inițiale */
   outline: none; /* Elimina conturul implicit (outline) atunci cand input-ul are focus */
   animation: borderAnimation 3s normal, borderAnimationReverse 0.5s reverse; /* Animatii pentru culoarea bordurii */
+}
+
+.modal-buy {
+  z-index: 1000; /* Sau o valoare mai mare decât z-index-ul caruselului */
+}
+
+.secondslider {
+  z-index: 900; /* Sau o valoare mai mică decât z-index-ul modalului */
+}
+
+.flag--second {
+  position: absolute;
+  top: 30%;
+  left: 24px;
+  display: flex;
+  gap: 18px;
+  padding-right: 25px;
+  background: #fafafa;
+  box-shadow: 2.722px 0px 0px 0px rgba(0, 0, 0, 0.1);
+  color: #000;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.36px;
 }
 
 /* Adaugă stil specific pentru input-ul focusat */
@@ -1514,6 +1540,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 21px;
+  width: 100%;
 }
 
 .buy-menu-input-text-personal {
@@ -1628,13 +1655,13 @@ body {
 /* MEDIA (PROIECT) */
 
 @media screen and (429px <= width <= 768px) {
-  .hero-page {
+  /* .hero-page {
     margin: 0px 32px 50px 32px;
-  }
+  } */
 
   .hero-div {
     background-image: url(../src/images/images/chocolate-covered-cocoa-powder\ 1.jpg);
-    height: 650px;
+    height: 100%;
   }
 
   .hero-container {
@@ -2253,11 +2280,96 @@ h1 {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.second-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
+
+.modal-buy-third {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background: #fafafa;
+  position: relative;
+  height: 628px;
+}
+
+.name---input {
+  display: flex;
+
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.email---input {
+  display: flex;
+
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+  width: 100%;
+  margin-bottom: 18px;
+  border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+}
+
+.phone---input {
+  margin-bottom: 18px;
+}
+
+.comment--input {
+  display: flex;
+
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+  width: 100%;
+  margin-bottom: 24px;
+  border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+}
+
+.buy-menu-third {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 24px 34px 24px 24px;
+}
+
+.third-modal-title {
+  max-width: 300px;
+}
+
+.third-button-submmit {
+  margin-top: 24px;
+}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -2760,3 +2872,482 @@ hr {
     color: #fd9222;
   }
 }
+
+/* TOP SELLERS */
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  background-color: #fafafa;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+}
+h2 {
+  color: #111111;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+ul {
+  padding: 0;
+}
+
+.div--sellers {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  flex-shrink: 0;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+}
+
+.span-title {
+  color: #fd9222;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
+
+.text-seller {
+  color: #111;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+  max-width: 407px;
+}
+
+.last-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 680px;
+}
+
+.button-buy-now {
+  display: flex;
+  padding: 14px 40px;
+  align-items: flex-start;
+  gap: 14px;
+  border-radius: 100px;
+  background: #fd9222;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.button-buy-now:hover,
+.button-buy-now:focus {
+  background: #fcf1e0;
+  color: #fd9222;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.top-seller {
+  margin-top: 60px;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+/* .second--button {
+  margin-left: 330px;
+} */
+/* 
+.last-element .distance-between {
+  gap: 300px;
+} */
+
+@media screen and (429px <= width <= 768px) {
+  .list-card {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footer-contact {
+    display: block;
+  }
+
+  .img-choco {
+    display: none;
+  }
+
+  .list-icons {
+    gap: 1px;
+  }
+
+  .img {
+    max-width: 300px;
+    height: 464px;
+    flex-shrink: 0;
+  }
+
+  .text-seller {
+    max-width: 306px;
+    color: #111;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+
+    margin-left: 30px;
+  }
+
+  .last-element {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 0;
+  }
+
+  .second--text--seller {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 429px) {
+  .list-card {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .second--button {
+    margin: 0;
+  }
+
+  .list-icons {
+    gap: 1px;
+  }
+  .img-choco {
+    display: none;
+  }
+
+  .img {
+    max-width: 300px;
+    height: 464px;
+    flex-shrink: 0;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  .footer-contact li {
+    margin-bottom: 10px;
+  }
+
+  .text-seller {
+    max-width: 306px;
+    color: #111;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+  }
+
+  .last-element {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 0;
+  }
+
+  .second--text--seller {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 656px) and (max-width: 768px) {
+  .media--class .text-seller {
+    order: 1;
+    /* width: 45%; */
+  }
+
+  .media--class .img:first-child {
+    order: 0;
+  }
+
+  .media--class .img:last-child {
+    order: 2;
+  }
+
+  .first---text {
+    color: #111;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+  }
+
+  .media--class {
+    display: inline-block;
+  }
+
+  .images--media {
+    flex-shrink: 0;
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .list-card {
+    flex-wrap: wrap;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (width >= 769px) {
+  .first---text {
+    display: none;
+  }
+
+  /* 
+  .img-choco {
+    display: none;
+  } */
+
+  .media--class {
+    gap: 10px;
+  }
+
+  /* .last-element {
+    gap: 310px;
+  } */
+
+  .div--sellers {
+    gap: 30px;
+  }
+
+  .second--text--seller {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .img-choco {
+    display: none;
+  }
+
+  .last-element {
+    gap: 300px;
+  }
+
+  /* div .last-element {
+    gap: 1px;
+  } */
+
+  .second--text--seller {
+    margin-bottom: 20px;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
+/* LOVED CHOCOLATE */
+section {
+  background-color: #fafafa;
+}
+h2 {
+  color: #111111;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
+.orange {
+  width: 222px;
+  height: 50px;
+  font-family: Montserrat;
+  border: 1px solid #fd9222;
+  background-color: #ffffff;
+  color: #111111;
+  border-radius: 25px;
+  gap: 14px;
+  line-height: 21.94px;
+  display: block;
+  margin: 20px auto;
+}
+.orange:hover {
+  cursor: pointer;
+  background-color: #fd9222;
+  color: #ffffff;
+}
+
+span {
+  color: #fd9222;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
+.rev {
+  display: block;
+  width: 100%;
+}
+.secondslider {
+  width: 1136px;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 600px;
+}
+
+.cardssecond {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: Fixed (1, 136px);
+  height: Fixed (240px);
+  gap: 28px;
+}
+
+.secondcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 360px;
+  margin: 0 10px;
+  width: 344px;
+  width: Hug (200px);
+  height: Hug (122px);
+  left: 72px;
+  gap: 18px;
+}
+
+.card-content {
+  color: rgba(17, 17, 17, 1) 70%;
+  height: 200px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  border-radius: 15px;
+  top: 42px;
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.dotssecond {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: rgba(17, 17, 17, 0.1);
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dotssecond.active {
+  background-color: rgba(253, 146, 34, 1);
+  width: 28px;
+  height: 13px;
+  border-radius: 7px;
+}
+
+.card img {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: block;
+  top: 40px;
+}
+
+.card-content {
+  padding: 20px;
+  height: 200px;
+  border: 1px solid;
+  border-color: rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  box-shadow: 0px 9.049315452575684px 26.571659088134766px 0px #d7e4f940;
+  text-align: center;
+}
+
+.card h3 {
+  margin-top: 50px;
+  font-size: 18px;
+}
+
+.card p {
+  color: rgba(17, 17, 17, 0.7);
+  font-size: 14px;
+  line-height: 18px;
+}
+/*modal*/

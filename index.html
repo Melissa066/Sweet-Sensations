@@ -32,7 +32,7 @@
           <img class="logo" id="mare" src="./src/images/img/logo.png" />
           <img class="logo" id="mic" src="./src/images/img/logomic.png" />
           <div class="menu" id="menuicon">
-            <img id="menumare" src="./src/images/img/menu-03.png" alt="" />
+            <img id="menumare" src="./src/images/img/menu-03.png" alt="menu" />
             <!-- <img id="menumic" src="./src/images/img/logomic.png" alt="" /> -->
           </div>
         </div>
@@ -123,140 +123,6 @@
       </div>
     </section>
     <!-- MODAL -->
-
-    <div class="modal-buy-container" id="modal-container">
-      <div class="modal-buy">
-        <button type="button" class="modal-buy-button-close" id="close">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            viewBox="0 0 28 28"
-            fill="none"
-          >
-            <path
-              class="modal-buy-button-close-svg"
-              d="M21 7L7 21"
-              stroke="#111111"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              class="modal-buy-button-close-svg"
-              d="M7 7L21 21"
-              stroke="#111111"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-        <h2 class="modal-buy-header">
-          BUY <span class="modal-buy-header-span">NOW</span>
-        </h2>
-        <ul class="modal-buy-list">
-          <li class="modal-buy-list-cards">
-            <img
-              src="./src/images/images/chocolate-modal.png"
-              alt="dark chocolate"
-              width="120"
-              height="107"
-            />
-            <button type="button" class="modal-buy-list-button">100 g</button>
-          </li>
-          <li class="modal-buy-list-cards">
-            <img
-              src="./src/images/images/ciocolata-alba.png"
-              alt="white and dark chocolate"
-              width="120"
-              height="107"
-            />
-            <button type="button" class="modal-buy-list-button">200 g</button>
-          </li>
-          <li class="modal-buy-list-cards">
-            <img
-              src="./src/images/images/tableta-ciocolata.png"
-              alt="chocolate bar"
-              width="120"
-              height="111"
-            />
-            <button type="button" class="modal-buy-list-button">300 g</button>
-          </li>
-        </ul>
-        <form name="buy-menu" class="buy-menu-form">
-          <div class="buy-menu-lable-div-personal">
-            <label class="buy-menu-lable-text" for="fsname"
-              >Personal information</label
-            >
-            <div class="buy-menu-lable-div-personal-input">
-              <input
-                class="buy-menu-input-text buy-menu-input-text-personal"
-                type="text"
-                id="fsname"
-                name="fname"
-                placeholder="Name"
-              />
-              <input
-                class="buy-menu-input-text buy-menu-input-text-personal"
-                type="text"
-                id="fsname"
-                name="lname"
-                placeholder="Surname"
-              />
-            </div>
-          </div>
-          <div>
-            <label class="buy-menu-lable-text" for="email">Email</label>
-            <input
-              class="buy-menu-input-text buy-menu-input-text-email"
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-            />
-          </div>
-          <div class="buy-menu-input-div-phone">
-            <label class="buy-menu-lable-text" for="phone">Phone number</label>
-            <input
-              class="buy-menu-input-text buy-menu-input-text-phone"
-              type="tel"
-              id="phone"
-              placeholder="Phone number"
-            />
-            <div class="flag">
-              <img src="./src/images/images/ukraine.svg" alt="flag" class="" />
-              <p>+380</p>
-            </div>
-          </div>
-          <div class="buy-menu-input-div-credit-card">
-            <label class="buy-menu-lable-text" for="card">Card number</label>
-            <input
-              class="buy-menu-input-text buy-menu-input-text-credit-card"
-              type="text"
-              id="card"
-              placeholder="Enter card"
-            />
-            <img
-              src="./src/images/images/mastercard.svg"
-              alt="mastercard logo"
-              class="master-card-logo"
-            />
-          </div>
-          <div>
-            <label class="buy-menu-lable-text" for="comment">Comment</label>
-            <textarea
-              class="buy-menu-input-text buy-menu-input-text-textarea"
-              name="comment"
-              id="comment"
-              cols="30"
-              rows="10"
-              placeholder="Enter text"
-            ></textarea>
-          </div>
-          <button type="submit" class="buy-menu-submit-button">Submit</button>
-        </form>
-      </div>
-    </div>
 
     <!-- BENEFITS -->
     <section class="section--benefits">
@@ -554,7 +420,7 @@
 
     <!-- OUR PRODUCTS -->
 
-    <section class="section-three">
+    <!-- <section class="section-three">
       <h1 class="section-three-title">
         Our <span class="orange-title">products</span>
       </h1>
@@ -673,6 +539,7 @@
         <span class="dot"></span>
         <span class="dot"></span>
       </div>
+
       <script>
         const slider = document.querySelector(".slider");
         const cards = document.querySelector(".cards");
@@ -710,15 +577,455 @@
           dot.addEventListener("click", () => goToCard(index));
         });
         document.addEventListener("DOMContentLoaded", showCards);
+      </script>
+    </section> -->
 
-        function scrollToFooter() {
-          const footerElement = document.getElementById("footer");
-          if (footerElement) {
-            footerElement.scrollIntoView({ behavior: "smooth" });
+    <section class="section-three">
+      <!-- ... alte elemente HTML ... -->
+      <h1 class="section-three-title">
+        Our <span class="orange-title">products</span>
+      </h1>
+
+      <div
+        class="section-three-carousel-container slider hide-overflow"
+        data-flickity='{"groupCells": true}'
+      >
+        <ul class="our-products-list cards">
+          <!-- ... elemente de listă ... -->
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/orange.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Orange</h3>
+              <p class="carousel-description">Dark chocolate</p>
+              <button class="carousel-button">45 UAH</button>
+            </div>
+          </li>
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/apple-cranberry.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Apple&Cranberry</h3>
+              <p class="carousel-description">Milk chocolate</p>
+              <button class="carousel-button">50 UAH</button>
+            </div>
+          </li>
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/lime.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Lime&sea salt</h3>
+              <p class="carousel-description">Dark chocolate</p>
+              <button class="carousel-button">65 UAH</button>
+            </div>
+          </li>
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/pineapple.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Pinneaple</h3>
+              <p class="carousel-description">Dark chocolate</p>
+              <button class="carousel-button">54 UAH</button>
+            </div>
+          </li>
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/classic-milk.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Classic</h3>
+              <p class="carousel-description">Milk chocolate</p>
+              <button class="carousel-button">45 UAH</button>
+            </div>
+          </li>
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/honey.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Honey</h3>
+              <p class="carousel-description">Milk chocolate</p>
+              <button class="carousel-button">50 UAH</button>
+            </div>
+          </li>
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/roasted.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Roasted nuts</h3>
+              <p class="carousel-description">Dark chocolate</p>
+              <button class="carousel-button">66 UAH</button>
+            </div>
+          </li>
+          <li class="slide fade card">
+            <div class="slide-container">
+              <img
+                class="chocolate-picture"
+                src="./src/images/white.jpg"
+                style="width: 230px; height: 201px"
+              />
+              <h3 class="carousel-title">Classic</h3>
+              <p class="carousel-description">White chocolate</p>
+              <button class="carousel-button">54 UAH</button>
+            </div>
+          </li>
+        </ul>
+
+        <a class="prev" onclick="prevProductCard()">&#10094;</a>
+        <a class="next" onclick="nextProductCard()">&#10095;</a>
+      </div>
+
+      <div class="pagination">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <script>
+        const productSlider = document.querySelector(
+          ".section-three-carousel-container"
+        );
+        const productCards = document.querySelector(".cards");
+        const productCardWidth = document.querySelector(".slide").offsetWidth;
+        const productDots = document.querySelectorAll(".dot");
+        let currentProductIndex = 0;
+
+        function showProductCards() {
+          productCards.style.transform = `translateX(-${
+            currentProductIndex * (productCardWidth + 20)
+          }px)`;
+          updateProductDots();
+        }
+
+        function nextProductCard() {
+          if (currentProductIndex < 7) {
+            currentProductIndex++;
+            showProductCards();
           }
         }
+
+        function prevProductCard() {
+          if (currentProductIndex > 0) {
+            currentProductIndex--;
+            showProductCards();
+          }
+        }
+
+        function goToProductCard(index) {
+          currentProductIndex = index;
+          showProductCards();
+        }
+
+        function updateProductDots() {
+          productDots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentProductIndex);
+          });
+        }
+
+        productDots.forEach((dot, index) => {
+          dot.addEventListener("click", () => goToProductCard(index));
+        });
+
+        document.addEventListener("DOMContentLoaded", showProductCards);
       </script>
     </section>
+
+    <!-- TOP SELLERS -->
+    <section class="top-seller">
+      <div class="div--sellers">
+        <h2><span class="span-title">TOP </span>SELLERS</h2>
+        <ul class="list-card media--class">
+          <li class="img">
+            <img
+              src="./src/images/chioco1.png"
+              alt="cocoa"
+              class="images--media"
+            />
+          </li>
+          <li>
+            <p class="text-seller first---text">
+              Crazy enough chocolate originates from a bean just like the coffee
+              bean called Cacao. Cacao has been around for thousands of years
+              and was first discovered by the Native American tribe called the
+              Mayans.
+            </p>
+          </li>
+
+          <li class="img">
+            <img
+              src="./src/images/chioco2.png"
+              alt="chocolate"
+              class="images--media"
+            />
+          </li>
+          <li class="img-choco">
+            <img src="./src/images/chioco3.png " alt="stackchocolate" />
+          </li>
+        </ul>
+        <div class="last-element desktop--margin" id="sellers">
+          <p class="second--text--seller">
+            Crazy enough chocolate originates from a bean just like the coffee
+            bean called Cacao. Cacao has been around for thousands of years and
+            was first discovered by the Native American tribe called the Mayans.
+          </p>
+
+          <button
+            id="open-second"
+            type="button"
+            class="button-buy-now second--button"
+          >
+            Buy now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOVED CHOCOLATE -->
+
+    <section class="rev">
+      <h2><span>CHOCOLATE</span> IS LOVED</h2>
+      <div class="secondslider">
+        <div class="cardssecond">
+          <div class="secondcard">
+            <img src="./src/images/img/victoria.png" alt="victoria" />
+            <div class="card-content">
+              <h3>Victoria Dobrzhanska</h3>
+              <p>
+                I love this chocolate bar. Perfect combination of light crispy
+                wafer, covered in a thin layer chocolate.
+              </p>
+            </div>
+          </div>
+          <div class="secondcard">
+            <img src="./src/images/img/nazar.png" alt="nazar" />
+            <div class="card-content">
+              <h3>Nazar Babenko</h3>
+              <p>
+                This chocolate confection is a delight! A delight! The wafer is
+                light and crisp, the hazelnut cream is smooth, and the chocolate
+                is good.
+              </p>
+            </div>
+          </div>
+          <div class="secondcard">
+            <img src="./src/images/img/olena.png" alt="olena" />
+            <div class="card-content">
+              <h3>Olena Kampusch</h3>
+              <p>
+                Chocolate is a family favourite treat. Love the delicious smooth
+                chocolate and the creaminess inside. The wafer is soft but
+                crunchy.
+              </p>
+            </div>
+          </div>
+          <div class="secondcard">
+            <img src="./src/images/img/natalia.png" alt="natalia" />
+            <div class="card-content">
+              <h3>Natalia Sus</h3>
+              <p>
+                The chocolate assortment was delicious. Both dark and milk
+                chocolate pieces were smooth and just right on the sweetness
+                level.
+              </p>
+            </div>
+          </div>
+          <div class="secondcard">
+            <img src="./src/images/img/danilo.png" alt="danilo" />
+            <div class="card-content">
+              <h3>Danilo Nottingham</h3>
+              <p>
+                This is delicious. It so rich and flavorful you don’t need to
+                use as many. I love topping an apple with almond butter and
+                these chips for a snack.
+              </p>
+            </div>
+          </div>
+          <div class="secondcard">
+            <img src="./src/images/img/irina.png" alt="irina" />
+            <div class="card-content">
+              <h3>Irina Tydnyuk</h3>
+              <p>
+                This is simply the best chocolate around, and I'm just thrilled
+                to support a local company! Best local chocolate - world class.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--Carousel section-->
+        <div class="indicator">
+          <div class="dotssecond"></div>
+          <div class="dotssecond"></div>
+          <div class="dotssecond"></div>
+          <div class="dotssecond"></div>
+        </div>
+        <button
+          id="open-third"
+          type="button"
+          class="orange"
+          onclick="openModal()"
+        >
+          Leave a review
+        </button>
+      </div>
+      <script>
+        const secondslider = document.querySelector(".secondslider");
+        const cardssecond = document.querySelector(".cardssecond");
+        const cardWidthsecond =
+          document.querySelector(".secondcard").offsetWidth;
+        const dotssecond = document.querySelectorAll(".dotssecond");
+
+        let currentCardIndex = 0;
+
+        function showCards() {
+          cardssecond.style.transform = `translateX(-${
+            currentCardIndex * (cardWidthsecond + 20)
+          }px)`;
+          updateDots();
+        }
+
+        function nextCard() {
+          if (currentCardIndex < 5) {
+            currentCardIndex++;
+            showCards();
+          }
+        }
+
+        function prevCard() {
+          if (currentCardIndex > 0) {
+            currentCardIndex--;
+            showCards();
+          }
+        }
+
+        function goToCard(index) {
+          currentCardIndex = index;
+          showCards();
+        }
+
+        function updateDots() {
+          dotssecond.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentCardIndex);
+          });
+        }
+
+        dotssecond.forEach((dot, index) => {
+          dot.addEventListener("click", () => goToCard(index));
+        });
+
+        document.addEventListener("DOMContentLoaded", showCards);
+      </script>
+    </section>
+
+    <!-- THIRD MODAL -->
+
+    <div class="modal-buy-container" id="modal-container-third">
+      <div class="modal-buy-third">
+        <button type="button" class="modal-buy-button-close" id="close-third">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+          >
+            <path
+              class="modal-buy-button-close-svg"
+              d="M21 7L7 21"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              class="modal-buy-button-close-svg"
+              d="M7 7L21 21"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <h2 class="title--modal third-modal-title">
+          LEAVE A REVIEW ABOUT
+          <span class="title-span"> OUR CHOCOLATE</span>
+        </h2>
+        <form name="buy-menu-third" class="buy-menu-form-third">
+          <div class="buy-menu-lable-div-personal">
+            <div class="buy-menu-lable-div-personal-input">
+              <input
+                class="buy-menu-input-text buy-menu-input-text-personal name---input"
+                type="text"
+                id="fsname"
+                name="fname"
+                placeholder="Name"
+              />
+            </div>
+          </div>
+          <div>
+            <input
+              class="buy-menu-input-text buy-menu-input-text-email email---input"
+              type="email"
+              id="email"
+              placeholder="Email"
+            />
+          </div>
+          <div class="buy-menu-input-div-phone">
+            <input
+              class="buy-menu-input-text buy-menu-input-text-phone phone---input"
+              type="tel"
+              id="phone"
+              placeholder="Phone number"
+            />
+            <div class="flag--second">
+              <img src="./src/images/images/ukraine.svg" alt="flag" class="" />
+              <p>+380</p>
+            </div>
+          </div>
+
+          <div>
+            <textarea
+              class="buy-menu-input-text buy-menu-input-text-textarea comment---input"
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+              placeholder="Enter text"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="buy-menu-submit-button third-button-submmit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
 
     <!-- exPLORE OUR NEW CHOCOLATE FIRST -->
     <section class="chocolate-first">
@@ -836,7 +1143,279 @@
         </ul>
       </nav>
     </footer>
+    <div class="modal-buy-container" id="modal-container">
+      <div class="modal-buy">
+        <button type="button" class="modal-buy-button-close" id="close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+          >
+            <path
+              class="modal-buy-button-close-svg"
+              d="M21 7L7 21"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              class="modal-buy-button-close-svg"
+              d="M7 7L21 21"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <h2 class="modal-buy-header">
+          BUY <span class="modal-buy-header-span">NOW</span>
+        </h2>
+        <ul class="modal-buy-list">
+          <li class="modal-buy-list-cards">
+            <img
+              src="./src/images/images/chocolate-modal.png"
+              alt="dark chocolate"
+              width="120"
+              height="107"
+            />
+            <button type="button" class="modal-buy-list-button">100 g</button>
+          </li>
+          <li class="modal-buy-list-cards">
+            <img
+              src="./src/images/images/ciocolata-alba.png"
+              alt="white and dark chocolate"
+              width="120"
+              height="107"
+            />
+            <button type="button" class="modal-buy-list-button">200 g</button>
+          </li>
+          <li class="modal-buy-list-cards">
+            <img
+              src="./src/images/images/tableta-ciocolata.png"
+              alt="chocolate bar"
+              width="120"
+              height="111"
+            />
+            <button type="button" class="modal-buy-list-button">300 g</button>
+          </li>
+        </ul>
+        <form name="buy-menu" class="buy-menu-form">
+          <div class="buy-menu-lable-div-personal">
+            <label class="buy-menu-lable-text" for="fsname"
+              >Personal information</label
+            >
+            <div class="buy-menu-lable-div-personal-input">
+              <input
+                class="buy-menu-input-text buy-menu-input-text-personal"
+                type="text"
+                id="fsname"
+                name="fname"
+                placeholder="Name"
+              />
+              <input
+                class="buy-menu-input-text buy-menu-input-text-personal"
+                type="text"
+                id="fsname"
+                name="lname"
+                placeholder="Surname"
+              />
+            </div>
+          </div>
+          <div>
+            <label class="buy-menu-lable-text" for="email">Email</label>
+            <input
+              class="buy-menu-input-text buy-menu-input-text-email"
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="buy-menu-input-div-phone">
+            <label class="buy-menu-lable-text" for="phone">Phone number</label>
+            <input
+              class="buy-menu-input-text buy-menu-input-text-phone"
+              type="tel"
+              id="phone"
+              placeholder="Phone number"
+            />
+            <div class="flag">
+              <img src="./src/images/images/ukraine.svg" alt="flag" class="" />
+              <p>+380</p>
+            </div>
+          </div>
+          <div class="buy-menu-input-div-credit-card">
+            <label class="buy-menu-lable-text" for="card">Card number</label>
+            <input
+              class="buy-menu-input-text buy-menu-input-text-credit-card"
+              type="text"
+              id="card"
+              placeholder="Enter card"
+            />
+            <img
+              src="./src/images/images/mastercard.svg"
+              alt="mastercard logo"
+              class="master-card-logo"
+            />
+          </div>
+          <div>
+            <label class="buy-menu-lable-text" for="comment">Comment</label>
+            <textarea
+              class="buy-menu-input-text buy-menu-input-text-textarea"
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+              placeholder="Enter text"
+            ></textarea>
+          </div>
+          <button type="submit" class="buy-menu-submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- SECOND-MODAL -->
+
+    <div class="modal-buy-container" id="second-container">
+      <div class="modal-buy">
+        <button type="button" class="modal-buy-button-close" id="close-second">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+          >
+            <path
+              class="modal-buy-button-close-svg"
+              d="M21 7L7 21"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              class="modal-buy-button-close-svg"
+              d="M7 7L21 21"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <h2 class="modal-buy-header">
+          BUY <span class="modal-buy-header-span">NOW</span>
+        </h2>
+        <ul class="modal-buy-list">
+          <li class="modal-buy-list-cards">
+            <img
+              src="./src/images/images/chocolate-modal.png"
+              alt="dark chocolate"
+              width="120"
+              height="107"
+            />
+            <button type="button" class="modal-buy-list-button">100 g</button>
+          </li>
+          <li class="modal-buy-list-cards">
+            <img
+              src="./src/images/images/ciocolata-alba.png"
+              alt="white and dark chocolate"
+              width="120"
+              height="107"
+            />
+            <button type="button" class="modal-buy-list-button">200 g</button>
+          </li>
+          <li class="modal-buy-list-cards">
+            <img
+              src="./src/images/images/tableta-ciocolata.png"
+              alt="chocolate bar"
+              width="120"
+              height="111"
+            />
+            <button type="button" class="modal-buy-list-button">300 g</button>
+          </li>
+        </ul>
+        <form name="buy-menu" class="buy-menu-form">
+          <div class="buy-menu-lable-div-personal">
+            <label class="buy-menu-lable-text" for="fsname"
+              >Personal information</label
+            >
+            <div class="buy-menu-lable-div-personal-input">
+              <input
+                class="buy-menu-input-text buy-menu-input-text-personal"
+                type="text"
+                id="fsname"
+                name="fname"
+                placeholder="Name"
+              />
+              <input
+                class="buy-menu-input-text buy-menu-input-text-personal"
+                type="text"
+                id="fsname"
+                name="lname"
+                placeholder="Surname"
+              />
+            </div>
+          </div>
+          <div>
+            <label class="buy-menu-lable-text" for="email">Email</label>
+            <input
+              class="buy-menu-input-text buy-menu-input-text-email"
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="buy-menu-input-div-phone">
+            <label class="buy-menu-lable-text" for="phone">Phone number</label>
+            <input
+              class="buy-menu-input-text buy-menu-input-text-phone"
+              type="tel"
+              id="phone"
+              placeholder="Phone number"
+            />
+            <div class="flag">
+              <img src="./src/images/images/ukraine.svg" alt="flag" class="" />
+              <p>+380</p>
+            </div>
+          </div>
+          <div class="buy-menu-input-div-credit-card">
+            <label class="buy-menu-lable-text" for="card">Card number</label>
+            <input
+              class="buy-menu-input-text buy-menu-input-text-credit-card"
+              type="text"
+              id="card"
+              placeholder="Enter card"
+            />
+            <img
+              src="./src/images/images/mastercard.svg"
+              alt="mastercard logo"
+              class="master-card-logo"
+            />
+          </div>
+          <div>
+            <label class="buy-menu-lable-text" for="comment">Comment</label>
+            <textarea
+              class="buy-menu-input-text buy-menu-input-text-textarea"
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+              placeholder="Enter text"
+            ></textarea>
+          </div>
+          <button type="submit" class="buy-menu-submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
     <script src="./java-script/modal.js"></script>
     <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/second-modal.js"></script>
+    <script type="module" src="./third.js"></script>
+    <script src="./js/footer.js"></script>
   </body>
 </html>
