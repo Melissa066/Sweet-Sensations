@@ -29,19 +29,28 @@
     <header>
       <div class="cent">
         <div class="right">
-          <img class="logo" id="mare" src="./src/images/img/logo.png" />
-          <img class="logo" id="mic" src="./src/images/img/logomic.png" />
+          <img
+            class="logo"
+            id="mare"
+            src="./src/images/img/logo.png"
+            alt="img"
+          />
+          <img
+            class="logo"
+            id="mic"
+            src="./src/images/img/logomic.png"
+            alt="img"
+          />
           <div class="menu" id="menuicon">
             <img id="menumare" src="./src/images/img/menu-03.png" alt="menu" />
-            <!-- <img id="menumic" src="./src/images/img/logomic.png" alt="" /> -->
           </div>
         </div>
         <ul>
           <li><a id="home" class="first-link" href="">Home</a></li>
-          <li><a href="">How it's made?</a></li>
-          <li><a href="">Our products</a></li>
-          <li><a href="">Top seller</a></li>
-          <li><a href="">Chocolate is loved</a></li>
+          <li><a href="#how-made">How it's made?</a></li>
+          <li><a href="#products-section">Our products</a></li>
+          <li><a href="#top-seller">Top seller</a></li>
+          <li><a href="#love-section">Chocolate is loved</a></li>
         </ul>
         <div class="social">
           <svg class="input-svg" id="first" width="24" height="24">
@@ -67,7 +76,7 @@
           if (screen.width < 576) {
             menuicon.innerHTML = '<img src="/src/images/img/menu-03mic.png">';
           } else {
-            menuicon.innerHTML = '<img src="images/menu-03.png">';
+            menuicon.innerHTML = '<img src="/src/images/img/menu-03.png">';
           }
 
           isMenuModified = false;
@@ -94,7 +103,7 @@
                 Buy now
               </button>
               <button type="button" class="button-how-made">
-                How its made
+                How it's made
               </button>
             </div>
             <div class="scroll-down-div">
@@ -195,10 +204,7 @@
             <div class="row">
               <!-- FLIP CARDS -->
               <!-- FLIP 1 -->
-              <div
-                class="section-three-cards"
-                ontouchstart="this.classList.toggle('hover');"
-              >
+              <div class="section-three-cards">
                 <!-- FLIP CARD INNER -->
                 <div class="section-three-flip-cards">
                   <!-- FRONT CARD -->
@@ -242,10 +248,7 @@
               </div>
               <!-- FLIP 2 -->
               <div class="section-three-cards">
-                <div
-                  class="section-three-flip-cards"
-                  ontouchstart="this.classList.toggle('hover');"
-                >
+                <div class="section-three-flip-cards">
                   <div class="section-three-card-milk">
                     <img
                       src="./src/images/images/milk-bottle.png"
@@ -281,10 +284,7 @@
               </div>
               <!-- FLIP 3 -->
               <div class="section-three-cards">
-                <div
-                  class="section-three-flip-cards"
-                  ontouchstart="this.classList.toggle('hover');"
-                >
+                <div class="section-three-flip-cards">
                   <div class="section-three-card-nuts">
                     <img
                       src="./src/images/images/nuts.png"
@@ -320,10 +320,7 @@
               </div>
               <!-- FLIP 4 -->
               <div class="section-three-cards">
-                <div
-                  class="section-three-flip-cards"
-                  ontouchstart="this.classList.toggle('hover');"
-                >
+                <div class="section-three-flip-cards">
                   <div class="section-three-card-sweet">
                     <img
                       src="./src/images/images/sweet-chocolate.png"
@@ -368,7 +365,7 @@
     </section>
 
     <!-- hOW IT'S made? -->
-    <section class="section-two">
+    <section class="section-two" id="how-made">
       <h1 class="section-two-title">
         How it's <span class="orange-title">made?</span>
       </h1>
@@ -380,8 +377,6 @@
             height="400"
             src="./src/images/chocolote_spoler-2d8faa6d.mp4"
             title="YouTube video player"
-            frameborder="0"
-            preload="none"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             style="border-radius: 15px"
             allowfullscreen
@@ -418,169 +413,7 @@
       </div>
     </section>
 
-    <!-- OUR PRODUCTS -->
-
-    <!-- <section class="section-three">
-      <h1 class="section-three-title">
-        Our <span class="orange-title">products</span>
-      </h1>
-      <div
-        class="section-three-carousel-container slider hide-overflow"
-        data-flickity='{"groupCells": true}'
-      >
-        <ul class="our-products-list cards">
-          <li class="slide fade card">
-            <div class="slide-container">
-              <img
-                class="chocolate-picture"
-                src="./src/images/orange.jpg"
-                style="width: 230px; height: 201px"
-              />
-              <h3 class="carousel-title">Orange</h3>
-              <p class="carousel-description">Dark chocolate</p>
-              <button class="carousel-button">45 UAH</button>
-            </div>
-          </li>
-          <li class="slide fade card">
-            <div class="slide-container">
-              <img
-                class="chocolate-picture"
-                src="./src/images/apple-cranberry.jpg"
-                style="width: 230px; height: 201px"
-              />
-              <h3 class="carousel-title">Apple&Cranberry</h3>
-              <p class="carousel-description">Milk chocolate</p>
-              <button class="carousel-button">50 UAH</button>
-            </div>
-          </li>
-          <li class="slide fade card">
-            <div class="slide-container">
-              <img
-                class="chocolate-picture"
-                src="./src/images/lime.jpg"
-                style="width: 230px; height: 201px"
-              />
-              <h3 class="carousel-title">Lime&sea salt</h3>
-              <p class="carousel-description">Dark chocolate</p>
-              <button class="carousel-button">65 UAH</button>
-            </div>
-          </li>
-          <li class="slide fade card">
-            <div class="slide-container">
-              <img
-                class="chocolate-picture"
-                src="./src/images/pineapple.jpg"
-                style="width: 230px; height: 201px"
-              />
-              <h3 class="carousel-title">Pinneaple</h3>
-              <p class="carousel-description">Dark chocolate</p>
-              <button class="carousel-button">54 UAH</button>
-            </div>
-          </li>
-          <li class="slide fade card">
-            <div class="slide-container">
-              <img
-                class="chocolate-picture"
-                src="./src/images/classic-milk.jpg"
-                style="width: 230px; height: 201px"
-              />
-              <h3 class="carousel-title">Classic</h3>
-              <p class="carousel-description">Milk chocolate</p>
-              <button class="carousel-button">45 UAH</button>
-            </div>
-          </li>
-          <li class="slide fade card">
-            <div class="slide-container">
-              <img
-                class="chocolate-picture"
-                src="./src/images/honey.jpg"
-                style="width: 230px; height: 201px"
-              />
-              <h3 class="carousel-title">Honey</h3>
-              <p class="carousel-description">Milk chocolate</p>
-              <button class="carousel-button">50 UAH</button>
-            </div>
-          </li>
-          <li class="slide fade card">
-            <div class="slide-container">
-              <img
-                class="chocolate-picture"
-                src="./src/images/roasted.jpg"
-                style="width: 230px; height: 201px"
-              />
-              <h3 class="carousel-title">Roasted nuts</h3>
-              <p class="carousel-description">Dark chocolate</p>
-              <button class="carousel-button">66 UAH</button>
-            </div>
-          </li>
-          <li class="slide fade card">
-            <div class="slide-container">
-              <img
-                class="chocolate-picture"
-                src="./src/images/white.jpg"
-                style="width: 230px; height: 201px"
-              />
-              <h3 class="carousel-title">Classic</h3>
-              <p class="carousel-description">White chocolate</p>
-              <button class="carousel-button">54 UAH</button>
-            </div>
-          </li>
-        </ul>
-        <a class="prev" onclick="prevCard()">&#10094;</a>
-        <a class="next" onclick="nextCard()">&#10095;</a>
-      </div>
-      <div class="pagination">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-
-      <script>
-        const slider = document.querySelector(".slider");
-        const cards = document.querySelector(".cards");
-        const cardWidth = document.querySelector(".card").offsetWidth;
-        const dots = document.querySelectorAll(".dot");
-        let currentIndex = 0;
-        function showCards() {
-          cards.style.transform = `translateX(-${
-            currentIndex * (cardWidth + 20)
-          }px)`;
-          updateDots();
-        }
-        function nextCard() {
-          if (currentIndex < 2) {
-            currentIndex++;
-            showCards();
-          }
-        }
-        function prevCard() {
-          if (currentIndex > 0) {
-            currentIndex--;
-            showCards();
-          }
-        }
-        function goToCard(index) {
-          currentIndex = index;
-          showCards();
-        }
-        function updateDots() {
-          dots.forEach((dot, index) => {
-            dot.classList.toggle("active", index === currentIndex);
-          });
-        }
-        dots.forEach((dot, index) => {
-          dot.addEventListener("click", () => goToCard(index));
-        });
-        document.addEventListener("DOMContentLoaded", showCards);
-      </script>
-    </section> -->
-
-    <section class="section-three">
+    <section class="section-three" id="products-section">
       <!-- ... alte elemente HTML ... -->
       <h1 class="section-three-title">
         Our <span class="orange-title">products</span>
@@ -598,6 +431,7 @@
                 class="chocolate-picture"
                 src="./src/images/orange.jpg"
                 style="width: 230px; height: 201px"
+                alt="choco"
               />
               <h3 class="carousel-title">Orange</h3>
               <p class="carousel-description">Dark chocolate</p>
@@ -610,6 +444,7 @@
                 class="chocolate-picture"
                 src="./src/images/apple-cranberry.jpg"
                 style="width: 230px; height: 201px"
+                alt="choco"
               />
               <h3 class="carousel-title">Apple&Cranberry</h3>
               <p class="carousel-description">Milk chocolate</p>
@@ -622,6 +457,7 @@
                 class="chocolate-picture"
                 src="./src/images/lime.jpg"
                 style="width: 230px; height: 201px"
+                alt="choco"
               />
               <h3 class="carousel-title">Lime&sea salt</h3>
               <p class="carousel-description">Dark chocolate</p>
@@ -634,6 +470,7 @@
                 class="chocolate-picture"
                 src="./src/images/pineapple.jpg"
                 style="width: 230px; height: 201px"
+                alt="choco"
               />
               <h3 class="carousel-title">Pinneaple</h3>
               <p class="carousel-description">Dark chocolate</p>
@@ -646,6 +483,7 @@
                 class="chocolate-picture"
                 src="./src/images/classic-milk.jpg"
                 style="width: 230px; height: 201px"
+                alt="choco"
               />
               <h3 class="carousel-title">Classic</h3>
               <p class="carousel-description">Milk chocolate</p>
@@ -658,6 +496,7 @@
                 class="chocolate-picture"
                 src="./src/images/honey.jpg"
                 style="width: 230px; height: 201px"
+                alt="choco"
               />
               <h3 class="carousel-title">Honey</h3>
               <p class="carousel-description">Milk chocolate</p>
@@ -670,6 +509,7 @@
                 class="chocolate-picture"
                 src="./src/images/roasted.jpg"
                 style="width: 230px; height: 201px"
+                alt="choco"
               />
               <h3 class="carousel-title">Roasted nuts</h3>
               <p class="carousel-description">Dark chocolate</p>
@@ -682,6 +522,7 @@
                 class="chocolate-picture"
                 src="./src/images/white.jpg"
                 style="width: 230px; height: 201px"
+                alt="choco"
               />
               <h3 class="carousel-title">Classic</h3>
               <p class="carousel-description">White chocolate</p>
@@ -755,7 +596,7 @@
     </section>
 
     <!-- TOP SELLERS -->
-    <section class="top-seller">
+    <section class="top-seller" id="top-seller">
       <div class="div--sellers">
         <h2><span class="span-title">TOP </span>SELLERS</h2>
         <ul class="list-card media--class">
@@ -806,7 +647,7 @@
 
     <!-- LOVED CHOCOLATE -->
 
-    <section class="rev">
+    <section class="rev" id="love-section">
       <h2><span>CHOCOLATE</span> IS LOVED</h2>
       <div class="secondslider">
         <div class="cardssecond">
@@ -814,7 +655,7 @@
             <img src="./src/images/img/victoria.png" alt="victoria" />
             <div class="card-content">
               <h3>Victoria Dobrzhanska</h3>
-              <p>
+              <p class="text-love">
                 I love this chocolate bar. Perfect combination of light crispy
                 wafer, covered in a thin layer chocolate.
               </p>
@@ -824,7 +665,7 @@
             <img src="./src/images/img/nazar.png" alt="nazar" />
             <div class="card-content">
               <h3>Nazar Babenko</h3>
-              <p>
+              <p class="text-love">
                 This chocolate confection is a delight! A delight! The wafer is
                 light and crisp, the hazelnut cream is smooth, and the chocolate
                 is good.
@@ -835,7 +676,7 @@
             <img src="./src/images/img/olena.png" alt="olena" />
             <div class="card-content">
               <h3>Olena Kampusch</h3>
-              <p>
+              <p class="text-love">
                 Chocolate is a family favourite treat. Love the delicious smooth
                 chocolate and the creaminess inside. The wafer is soft but
                 crunchy.
@@ -846,7 +687,7 @@
             <img src="./src/images/img/natalia.png" alt="natalia" />
             <div class="card-content">
               <h3>Natalia Sus</h3>
-              <p>
+              <p class="text-love">
                 The chocolate assortment was delicious. Both dark and milk
                 chocolate pieces were smooth and just right on the sweetness
                 level.
@@ -857,7 +698,7 @@
             <img src="./src/images/img/danilo.png" alt="danilo" />
             <div class="card-content">
               <h3>Danilo Nottingham</h3>
-              <p>
+              <p class="text-love">
                 This is delicious. It so rich and flavorful you don’t need to
                 use as many. I love topping an apple with almond butter and
                 these chips for a snack.
@@ -868,7 +709,7 @@
             <img src="./src/images/img/irina.png" alt="irina" />
             <div class="card-content">
               <h3>Irina Tydnyuk</h3>
-              <p>
+              <p class="text-love">
                 This is simply the best chocolate around, and I'm just thrilled
                 to support a local company! Best local chocolate - world class.
               </p>
@@ -882,12 +723,7 @@
           <div class="dotssecond"></div>
           <div class="dotssecond"></div>
         </div>
-        <button
-          id="open-third"
-          type="button"
-          class="orange"
-          onclick="openModal()"
-        >
+        <button id="open-third" type="button" class="orange">
           Leave a review
         </button>
       </div>
@@ -980,7 +816,7 @@
               <input
                 class="buy-menu-input-text buy-menu-input-text-personal name---input"
                 type="text"
-                id="fsname"
+                id="fsname2"
                 name="fname"
                 placeholder="Name"
               />
@@ -992,13 +828,14 @@
               type="email"
               id="email"
               placeholder="Email"
+              autocomplete="email"
             />
           </div>
           <div class="buy-menu-input-div-phone">
             <input
               class="buy-menu-input-text buy-menu-input-text-phone phone---input"
               type="tel"
-              id="phone"
+              id="phone1"
               placeholder="Phone number"
             />
             <div class="flag--second">
@@ -1080,15 +917,15 @@
       <div class="contacts-global">
         <!-- <div class="footer-container"> -->
         <h2 class="footer-title">
-          <span class="footer-title-color">Chocolate</span> a delicious cure for
-          a bad day
+          <span class="footer-title-color">Chocolate</span
+          ><span class="second-title"> a delicious cure for a bad day</span>
         </h2>
         <!-- </div> -->
         <div class="contacts-icons">
           <div class="contacts">
             <p class="contacts-title">Contact us</p>
             <address>
-              <ul class="footer-contact">
+              <ul class="footer-contact" id="myContacts">
                 <li>
                   <a href="tel:+380684439426" class="contact-link"
                     >+380 (68) 443-94-26</a
@@ -1205,23 +1042,25 @@
         </ul>
         <form name="buy-menu" class="buy-menu-form">
           <div class="buy-menu-lable-div-personal">
-            <label class="buy-menu-lable-text" for="fsname"
+            <label class="buy-menu-lable-text" for="name1"
               >Personal information</label
             >
             <div class="buy-menu-lable-div-personal-input">
               <input
                 class="buy-menu-input-text buy-menu-input-text-personal"
                 type="text"
-                id="fsname"
+                id="name1"
                 name="fname"
                 placeholder="Name"
+                autocomplete="given-name"
               />
               <input
                 class="buy-menu-input-text buy-menu-input-text-personal"
                 type="text"
-                id="fsname"
+                id="name2"
                 name="lname"
                 placeholder="Surname"
+                autocomplete="family-name"
               />
             </div>
           </div>
@@ -1230,8 +1069,9 @@
             <input
               class="buy-menu-input-text buy-menu-input-text-email"
               type="email"
-              id="email"
+              id="email1"
               placeholder="Enter your email"
+              autocomplete="email"
             />
           </div>
           <div class="buy-menu-input-div-phone">
@@ -1239,8 +1079,9 @@
             <input
               class="buy-menu-input-text buy-menu-input-text-phone"
               type="tel"
-              id="phone"
+              id="phone2"
               placeholder="Phone number"
+              autocomplete="tel"
             />
             <div class="flag">
               <img src="./src/images/images/ukraine.svg" alt="flag" class="" />
@@ -1252,7 +1093,7 @@
             <input
               class="buy-menu-input-text buy-menu-input-text-credit-card"
               type="text"
-              id="card"
+              id="card1"
               placeholder="Enter card"
             />
             <img
@@ -1266,10 +1107,11 @@
             <textarea
               class="buy-menu-input-text buy-menu-input-text-textarea"
               name="comment"
-              id="comment"
+              id="comment1"
               cols="30"
               rows="10"
               placeholder="Enter text"
+              autocomplete="off"
             ></textarea>
           </div>
           <button type="submit" class="buy-menu-submit-button">Submit</button>
@@ -1341,33 +1183,36 @@
         </ul>
         <form name="buy-menu" class="buy-menu-form">
           <div class="buy-menu-lable-div-personal">
-            <label class="buy-menu-lable-text" for="fsname"
+            <label class="buy-menu-lable-text" for="fsname3"
               >Personal information</label
             >
             <div class="buy-menu-lable-div-personal-input">
               <input
                 class="buy-menu-input-text buy-menu-input-text-personal"
                 type="text"
-                id="fsname"
+                id="fsname3"
                 name="fname"
                 placeholder="Name"
+                autocomplete="additional-name"
               />
               <input
                 class="buy-menu-input-text buy-menu-input-text-personal"
                 type="text"
-                id="fsname"
+                id="fsname4"
                 name="lname"
                 placeholder="Surname"
+                autocomplete="name"
               />
             </div>
           </div>
           <div>
-            <label class="buy-menu-lable-text" for="email">Email</label>
+            <label class="buy-menu-lable-text" for="email6">Email</label>
             <input
               class="buy-menu-input-text buy-menu-input-text-email"
               type="email"
-              id="email"
+              id="email6"
               placeholder="Enter your email"
+              autocomplete="email"
             />
           </div>
           <div class="buy-menu-input-div-phone">
@@ -1377,6 +1222,7 @@
               type="tel"
               id="phone"
               placeholder="Phone number"
+              autocomplete="off"
             />
             <div class="flag">
               <img src="./src/images/images/ukraine.svg" alt="flag" class="" />
@@ -1402,7 +1248,7 @@
             <textarea
               class="buy-menu-input-text buy-menu-input-text-textarea"
               name="comment"
-              id="comment"
+              id="comment2"
               cols="30"
               rows="10"
               placeholder="Enter text"

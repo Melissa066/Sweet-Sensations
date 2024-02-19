@@ -18,7 +18,7 @@ function showSlides() {
 }
 
 
-function showSlides() {
+function showSlidess() {
     const container = document.querySelector(".Slides-container");
     container.classList.add("hide-overflow");
 
