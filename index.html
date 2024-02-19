@@ -74,15 +74,19 @@
           menu.classList.remove("menuphone");
           menu.classList.add("cent");
           if (screen.width < 576) {
-            menuicon.innerHTML = '<img src="/src/images/img/menu-03mic.png">';
+            menuicon.innerHTML =
+              '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M3.5 14H24.5M3.5 7H24.5M3.5 21H24.5" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
           } else {
-            menuicon.innerHTML = '<img src="/src/images/img/menu-03.png">';
+            menuicon.innerHTML =
+              '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M3.5 14H24.5M3.5 7H24.5M3.5 21H24.5" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
           }
 
           isMenuModified = false;
         } else {
           menu.classList.remove("cent");
-          menuicon.innerHTML = '<img src="/src/images/img/close.png">';
+          menuicon.innerHTML =
+            '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M19.8334 8.16675L8.16669 19.8334M8.16669 8.16675L19.8334 19.8334" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
           menu.classList.add("menuphone");
           isMenuModified = true;
         }
