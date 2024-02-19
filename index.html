@@ -907,13 +907,18 @@
             >
             first!
           </h2>
-          <form class="form-class" name="sign-up" netlify>
+          <form
+            class="form-class"
+            name="sign-up"
+            method="POST"
+            data-netlify="true"
+          >
             <input
               class="modal-label"
               id="input---modal"
               placeholder="Enter your email"
               type="email"
-              name="email-address"
+              name="email"
               pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
             />
             <button type="submit" class="subscribe-button">Subscribe</button>
